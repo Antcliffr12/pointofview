@@ -6,7 +6,6 @@ function HeroSection() {
     <div className='hero' id="home">
         <div className='hero-bg'>
           
-          <video autoplay loop muted src={video} type='video/mp4' />
         </div>
     </div>
   )
