@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+
+
 import App from './App';
 import {
   BrowserRouter,
@@ -11,9 +14,24 @@ import {
 import reportWebVitals from './reportWebVitals';
 import './style.scss';
 
+
 import Layout from './components/Layout';
 import Home from './pages/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const { REACT_APP_SPACE_ID: SPACE_ID, REACT_APP_ACCESS_TOKEN: ACCESS_TOKEN } = process.env;
+
+// const contentfil_url = new ApolloClient({
+//   uri: `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}`,
+//   credentials: 'same-origin',
+//   cache: new InMemoryCache(),
+//   headers: {
+//     Authorization: `Bearer ${ACCESS_TOKEN}`
+//   }
+// });
+
+// console.log(contentfil_url);
+
+
 root.render(
   <BrowserRouter>
   <Layout>

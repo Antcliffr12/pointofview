@@ -59,7 +59,7 @@
         align-items: center;
         list-style: none;
         text-align: center;
-        margin-right:-22px;
+        margin:0;
 
         @include media-breakpoint-down(lg){
             display: none;

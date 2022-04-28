@@ -1,4 +1,3 @@
-import { FaHome } from "react-icons/fa";
 
 const HeroImage = `
 {
@@ -15,4 +14,4 @@ const HeroImage = `
 }
 `;
 
-export { home }
+export { HeroImage }

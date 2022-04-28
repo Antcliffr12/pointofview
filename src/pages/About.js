@@ -1,9 +1,9 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection';
-function Home() {
+function About() {
   return (
     <HeroSection />
   )
 }
 
-export default Home
+export default About
