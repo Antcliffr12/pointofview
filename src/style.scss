@@ -1,4 +1,8 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 
-
+@media (min-width:1400px) {
+    .container{
+        max-width:1140px;
+    }
+}

@@ -1,8 +1,13 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection';
+import ServiceCTA from '../components/ServicesCTA';
+
 function Home() {
   return (
-    <HeroSection />
+		<section id="home">
+			<HeroSection />
+			<ServiceCTA />
+		</section>
   )
 }
 
