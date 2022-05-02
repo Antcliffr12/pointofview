@@ -2,16 +2,52 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins/_breakpoints';
 
-.pov-navbar{
+.pov-navbar, .pov-navbar-scroll{
     background-color:transparent;
     height:80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:1rem;
+    font-size:1.125rem;
     position: sticky;
-    top:0;
+    width: 100%;
+    top:0; 
+    -webkit-transition: all 2s ease-in;
+    transition: all 1s ease-in;
     z-index: 10;
+    
+    &-scroll{
+        position: fixed;
+        top:0;
+        width: 100%;
+        background-color:$white;
+        -webkit-transition: all 2s ease-in;
+        transition: all 1s ease-in;
+        box-shadow: 0 10px 10px -10px rgba(0,0,0,.2);
+        width:100%;
+        z-index: 30;
+
+       .pov-navbar-container{
+           &__logo{
+               a{
+                color:$black;
+               }
+           }
+
+           &__mobileIcon{
+                @include media-breakpoint-down(lg){
+                    color: $black;
+                }
+           }
+       }//container
+       .pov-navbar__menu{
+            &-item{
+                a{
+                    color:$black;
+                }
+            }
+        }
+    }
 
     @include media-breakpoint-down(lg){
         transition: 0.8s all ease;
@@ -36,6 +72,7 @@
                 text-decoration: none;
                 font-weight: $font-weight-bold;
                 margin:0;
+
             }
 
         }

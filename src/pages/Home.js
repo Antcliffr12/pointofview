@@ -7,6 +7,7 @@ function Home() {
 		<section id="home">
 			<HeroSection />
 			<ServiceCTA />
+		
 		</section>
   )
 }

@@ -17,6 +17,7 @@ import './style.scss';
 
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import About from './pages/About';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const { REACT_APP_SPACE_ID: SPACE_ID, REACT_APP_ACCESS_TOKEN: ACCESS_TOKEN } = process.env;
 
@@ -37,6 +38,7 @@ root.render(
   <Layout>
     <Routes>
         <Route exact path="/pointofview" element={<Home />} />
+        <Route path="/pointofview/about" element={<About />} />
     </Routes>
   </Layout>
   </BrowserRouter>
