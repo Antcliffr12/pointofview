@@ -1,13 +1,15 @@
 import React from 'react'
-import CTA from './CTA'
+import SliderCTA from './SliderCTA'
+
 
 const ServiceCTA = () => {
+
   return (
     <div className='services'>
       <div className='container'>
         <div className='row'>
             <div className='col-md-12'>
-                <CTA />
+              <SliderCTA />  
             </div>
         </div>
       </div>

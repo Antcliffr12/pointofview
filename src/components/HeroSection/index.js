@@ -24,9 +24,10 @@ const HeroSection = () => {
   return (
     <div className='hero' id="home">
       <div className='container'>
+        
       {data.heroSectionCollection.items.map(item => (
           <Hero
-            key={item.title} 
+            key={item} 
             title={item.heroTitle}
             subText={item.subText}
             media={item.media.url}

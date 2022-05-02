@@ -14,4 +14,16 @@ const HeroImage = `
 }
 `;
 
-export { HeroImage }
+const ServiceCTAQuery = `
+{
+    serviceCtaCollection{
+        items{
+            id,
+            serviceTitle,
+            serviceExcerpt
+        }
+    }
+}    
+`;
+
+export { HeroImage, ServiceCTAQuery }

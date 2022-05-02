@@ -11,7 +11,7 @@
     height:800px;
     position: relative;
     z-index: 1;
-
+    margin-top:-80px;
     @include media-breakpoint-down(lg){
         height:500px;
     }
