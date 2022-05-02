@@ -49,17 +49,16 @@ const SliderCTA = (props) => {
                 {data.serviceCtaCollection.items.map(cta => (
                 
                     <SwiperSlide key={cta.id}>
-                        {    console.log(cta)}
-                    <div className='card text-center'>
-                        <div className='card-body'>
-                            <span className='card-body-image mb-4'>
-                                <TiGroup />
-                            </span>
-                            <h4 className='card-body-title'>{cta.serviceTitle}</h4>
-                            <p className='card-text'>{cta.serviceExcerpt}</p>
+                        <div className='card text-center'>
+                            <div className='card-body'>
+                                <span className='card-body-image mb-4'>
+                                    <TiGroup />
+                                </span>
+                                <h4 className='card-body-title'>{cta.serviceTitle}</h4>
+                                <p className='card-text'>{cta.serviceExcerpt}</p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>  
+                    </SwiperSlide>  
                 ))}
                 
                

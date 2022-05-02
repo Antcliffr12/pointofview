@@ -1,14 +1,16 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection';
 import ServiceCTA from '../components/ServicesCTA';
+import About from './About';
 
 function Home() {
   return (
-		<section id="home">
+	  
+	  	<section id="home">
 			<HeroSection />
 			<ServiceCTA />
-		
 		</section>
+	
   )
 }
 

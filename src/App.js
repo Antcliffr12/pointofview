@@ -1,45 +1,26 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './App.css';
-import Navigation from './components/Navigation';
-import useContentful from './helpers';
+import React from 'react';
+import Layout from './components/Layout';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
-
-const query = `
-{
-   heroSectionCollection{
-       items{
-           media{
-               url
-           }
-           heroTitle
-           subText
-           slug
-       }
-   }
-}
-`;
-
+import Home from './pages/Home';
+import About from './pages/About';
+import './style.scss';
 
 function App() {
- 
-  let {data, errors } = useContentful(query)
-
-  if(errors) 
-    return (
-      <span style={{ color: "red" }}>
-        {errors.map(error => error.message).join(',') }
-      </span>
-    );
-  if(!data) return <span>Loading...</span>
-
   return (
-    <div className="App">
-    <header className="App-header">
-      <h1>hi</h1>
-      {data.heroSectionCollection.items[0].heroTitle}
-    </header>
-  </div>
-  );
+  <BrowserRouter>
+    <Layout>
+      <Home />
+      <About />
+   
+    </Layout>
+  </BrowserRouter>
+  )
 }
 
 export default App;
