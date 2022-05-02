@@ -36,7 +36,7 @@ root.render(
   <BrowserRouter>
   <Layout>
     <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/pointofview" element={<Home />} />
     </Routes>
   </Layout>
   </BrowserRouter>
