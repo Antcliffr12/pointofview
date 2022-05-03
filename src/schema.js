@@ -1,29 +1,37 @@
-
-const HeroImage = `
-{
-   heroSectionCollection{
-       items{
-           media{
-               url
-           }
-           heroTitle
-           subText
-           slug
-       }
-   }
+const HomeQuery = `{
+    sectionCollection(limit: 1){
+        items{
+            title
+            slug
+            contentCollection {
+                items{
+                    ... on SectionHeroSection{
+                        title
+                        headline
+                        media{
+                            url
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 `;
 
-const ServiceCTAQuery = `
-{
-    serviceCtaCollection{
+const SectionSlider = `{
+    sectionSliderCollection{
         items{
-            id,
-            serviceTitle,
-            serviceExcerpt
+        	id
+           title
+          excerpt
         }
-    }
+      }
 }    
 `;
 
-export { HeroImage, ServiceCTAQuery }
+
+
+
+export { HomeQuery, SectionSlider }
+

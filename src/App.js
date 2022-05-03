@@ -10,14 +10,14 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import './style.scss';
+import SliderCTA from './components/ServicesCTA';
 
 function App() {
   return (
   <BrowserRouter>
     <Layout>
-      <Home />
-      <About />
-   
+     <Home />
+     <SliderCTA />
     </Layout>
   </BrowserRouter>
   )

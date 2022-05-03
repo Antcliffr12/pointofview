@@ -1,46 +1,29 @@
-import React from 'react'
-import useContentful from '../../helpers';
-import Hero from './Hero';
-
+import React from 'react';
 import './hero.scss';
 
-import { HeroImage } from '../../schema';
+export default function Hero(props) {
+    const {title, subText, media} = props;
+    let heading
 
-const query = HeroImage
 
-const HeroSection = () => {
-  // let { data, errors } = useContentful(query);
-  const { data, errors } = useContentful(query)
-  if(errors) {
-    return(
-      <span style={{ color: "red" }}>
-        {errors.map((error) => error.message).join(',')}
-      </span>
-    )
-  };
-  if(!data) return <span>Loading...</span>
+    heading = <h1>{title}</h1>
 
- 
-  return (
-    <div className='hero' id="home">
-      <div className='container'>
-        
-      {data.heroSectionCollection.items.map(item => (
-          <Hero
-            key={item} 
-            title={item.heroTitle}
-            subText={item.subText}
-            media={item.media.url}
-            slug={item.slug}
-            />
-        ) ) }
+    return (
+        <>
+            <div className='hero-bg'>
+                {
+                    media.split('.').reverse()[0] == 'mp4' ?
+                        <video src={media} type='video/mp4' autoPlay loop muted className='hero-bg__video' />
+                    :
+                        <img src={media} className='hero-bg__image' />
 
-      </div>
-       
-    </div>
-  )
+                }
+            </div>
+            <div className='hero-content'>
+                
+                <h1>{title}</h1>
+                <p>{subText}</p>
+            </div>
+        </>
+    );
 }
-
-
-
-export default HeroSection
