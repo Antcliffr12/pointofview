@@ -18,6 +18,7 @@ function App() {
     <Layout>
      <Home />
      <SliderCTA />
+     <About />
     </Layout>
   </BrowserRouter>
   )
